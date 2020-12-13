@@ -137,7 +137,7 @@ function GetSismos() {
     <div class="mapouter">
         <div class="gmap_canvas">
             <iframe  height="360" width="280" id="gmap_canvas" 
-                src="https://maps.google.com/maps?z=5&t=m&q=loc:${lat}+${long}&output=embed" 
+                src="https://maps.google.com/maps?z=7&t=m&q=loc:${lat}+${long}&output=embed" 
                 frameborder="0" scrolling="no" marginheight="0" marginwidth="0">
             </iframe>
         </div>
