@@ -36,6 +36,7 @@ footer{
 @media (max-width: 768px) {
     h3{
         color:yellow;
+        height: 2em;
 
     }
     }
