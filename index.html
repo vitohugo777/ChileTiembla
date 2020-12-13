@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <!-- Bootstrap 4.1.3 CSS -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css"
+    integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
+    <!-- jQuery 3.3.1 -->
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" 
+    integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+     <!-- Popper JS 1.14.3 -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js"
+    integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49" crossorigin="anonymous"></script>
+     <!-- styles -->
+    <link rel="stylesheet" href="assests/css/main.css">
+    <!-- Bootstrap 4.1.3 CSS -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css"
+    integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
+    <!-- Bootstrap JS 4.1.3 -->
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js" 
+    integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy" crossorigin="anonymous"></script>
+   <!-- styles -->
+   <link rel="stylesheet" href="assests/css/main.css">
+    
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Chile Tiembla</title>
+</head>
+<body>
+  <!-- Modal -->
+  <div class="modal fade" id="modalmap" tabindex="-1" aria-labelledby="modalmap" aria-hidden="true">
+    <div class="modal-dialog">
+      <div class="modal-content">
+        
+        <div class="modal-body">
+          <div class="container-fluid ">
+            <div class="row">
+              <div class="co1 col-9">
+                <h5>Epicentro</h5>
+              </div>
+              <div class="col 2 col-3 text-right">
+                <h5>Magnitud</h5>
+              </div>
+            </div>
+            <div class="row">
+              <div class="col-9">
+                <h5  id="ModalmaplLabel"></h5>
+              </div>
+              <div class="col-3 text-right fs-1">
+                <h1  id="ModalmaplLabel2"></h1>
+              </div>
+            </div>
+            <div class="row">
+              <div class="col1 col-8 text-left" >
+                <div id="mapa">Mapa</div>
+              </div>
+              <div class="col2 col-4 text-right">
+                <div id="grid_1 ">
+                    <br>
+                    <br>
+                    <br>
+                    <div><b>Fecha y Hora</b></div>
+                    <div class="fs-3"id="fecyhor"></div>
+                    <br>
+                    <br>
+                    <div><b>Profundidad</b></div>
+                    <div id="profundi"></div>
+                    <br>
+                    <br>
+                    <br>
+                    <button type="button" class=" btn-primary " data-dismiss="modal">Volver</button>
+                </div>
+              </div>
+            </div>
+          </div>          
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <header id="cabeceraYNavbar"></header>
+ 
+
+
+  <div class="container">
+    <div class="row">
+        <div class=" col1 col-12 col-sm-12 col-md-12">
+          <h3 class="text-white text-center">Ultimos sismos con magnitud igual o superior a 3.0</h3>
+        </div>  
+    </div>
+  </div> 
+  <div class="container" >
+    <div class="row">
+      <div class=" col1 col-12 col-sm-12 col-md-12 ">
+      <br>
+      <table id="sismos" class="table  text-white">
+        <tr>
+          <th>Fecha y Hora</th>
+          <th>Referencia Geografica</th>
+          <th class="text-center">Ver Mapa</th>
+          <th class="text-center">Magnitud (Ml)</th>
+          <th class="text-center">Profundidad (KM)</th>
+          <th class="text-center">Latitud</th>
+          <th class="text-center">Longitud</th>
+        </tr>
+      </table>
+      </div>
+    </div>
+  </div>
+  <script src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
+
+  
+  <script src="assests/js/script.js"></script>
+      <!-- google maps -->
+      <script src="https://polyfill.io/v3/polyfill.min.js?features=default"></script>
+      <script
+        src="https://maps.googleapis.com/maps/api/js?key=AIzaSyAePkvDPoDqFXhE1IlvsegE0YeuorfJmU8&libraries=&v=weekly"
+        defer
+      ></script>
+</body>
+</html>

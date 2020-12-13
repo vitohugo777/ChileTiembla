@@ -1,0 +1,35 @@
+body,html{
+        background-color: rgba(0, 0, 0);
+        color: rgb(209, 18, 50);
+        height: 100%;
+        margin: 0;
+        padding: 0;
+       
+    }
+
+footer{
+    background-color: rgb(190, 167, 167);
+    color: rgb(209, 18, 50);
+    height: 100%;
+    margin: 0;
+    padding: 0;
+    
+}
+
+    
+#grid_1{
+    display: grid;
+   
+    width: 100%;
+    height: auto;
+   
+}
+
+#grid_2{
+    display: grid;
+    grid-template-columns: 1fr 2fr;
+    grid-gap: 5px;
+    margin-left: 20px;
+    margin-top:10px ;
+}
+
