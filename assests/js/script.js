@@ -102,7 +102,7 @@ function GetSismos() {
         <div class="collapse navbar-collapse" id="navbarNav">
             <ul class="navbar-nav">
                 <li class="nav-item">
-                    <a class="nav-link" href="preparacion.html">°Preparacion para el proximo Terremoto</a>
+                    <a class="nav-link" href="preparacion.html">Chile Tiembla y estoy preparado ;)</a>
                 </li>
                 
             </ul>
