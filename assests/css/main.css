@@ -32,3 +32,21 @@ footer{
     margin-top:10px ;
 }
  
+@media screen and (max-width: 1225px) and (min-width: 835px) {
+
+    .priority-5{
+            display:none;
+    }
+  
+}
+
+@media screen and (max-width: 835px) {
+    .priority-5{
+            display:none;
+    }
+    .priority-4{
+            display:none;
+    }
+  
+}
+
