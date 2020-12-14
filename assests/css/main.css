@@ -33,11 +33,9 @@ footer{
 }
  
 @media screen and (max-width: 1225px) and (min-width: 835px) {
-
     .priority-5{
             display:none;
     }
-  
 }
 
 @media screen and (max-width: 835px) {
@@ -47,6 +45,5 @@ footer{
     .priority-4{
             display:none;
     }
-  
 }
 

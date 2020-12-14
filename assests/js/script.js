@@ -1,4 +1,7 @@
-addHeader()
+if (document.getElementById("cabeceraYNavbar")){
+    addHeader()
+}
+
 
 function GetSismos() {
     $.ajax({
@@ -27,9 +30,9 @@ function GetSismos() {
                           </td>
 
                             <td class="text-center">${mg}</td>
-                            <td class="text-center">${data[index].Profundidad}</td>
-                            <td class="text-center">${data[index].Latitud}</td>
-                            <td class="text-center">${data[index].Longitud}</td>
+                            <td class="text-center priority-4">${data[index].Profundidad}</td>
+                            <td class="text-center priority-5">${data[index].Latitud}</td>
+                            <td class="text-center priority-5">${data[index].Longitud}</td>
                         </tr>
                         `
                 }
@@ -49,9 +52,9 @@ function GetSismos() {
                           </td>
 
                             <td class="text-center" style="color:yellow;">${data[index].Magnitud}</td>
-                            <td class="text-center">${data[index].Profundidad}</td>
-                            <td class="text-center">${data[index].Latitud}</td>
-                            <td class="text-center">${data[index].Longitud}</td>
+                            <td class="text-center priority-4">${data[index].Profundidad}</td>
+                            <td class="text-center priority-5">${data[index].Latitud}</td>
+                            <td class="text-center priority-5">${data[index].Longitud}</td>
                         </tr>
                                 `
                     }
@@ -70,10 +73,10 @@ function GetSismos() {
                           </td>
 
                           <td class="text-center" style="color:red;">${data[index].Magnitud}</td>
-                            <td class="text-center">${data[index].Profundidad}</td>
-                            <td class="text-center">${data[index].Latitud}</td>
-                            <td class="text-center">${data[index].Longitud}</td>
-                        </tr>
+                          <td class="text-center priority-4">${data[index].Profundidad}</td>
+                          <td class="text-center priority-5">${data[index].Latitud}</td>
+                          <td class="text-center priority-5">${data[index].Longitud}</td>
+                      </tr>
                                 `
                         }
                     }
