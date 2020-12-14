@@ -1,0 +1,129 @@
+AIzaSyAePkvDPoDqFXhE1IlvsegE0YeuorfJmU8
+
+
+document.getElementById("map").innerHTML=new google.maps.Map(document.getElementById("map"), {
+        center: { latitud,longitud },
+        zoom: 8,
+    });
+
+
+key=API_KEY.
+
+Para usar esta clave en tu aplicación, transfiérela con el parámetro key=API_KEY.
+
+
+function initMap() {
+  // The location of Uluru
+  const uluru = { lat: -32.868, lng: -71.114 }
+  // The map, centered at Uluru
+  const map = new google.maps.Map(document.getElementById("map"), {
+    zoom: 4,
+    center: uluru,
+  });
+  // The marker, positioned at Uluru
+  const marker = new google.maps.Marker({
+    position: uluru,
+    map: map,
+  });
+}
+
+{ lat: -32.868, lng: -71.114 },
+
+ <div id="map"></div>
+
+ 
+
+https://maps.googleapis.com/maps/api/staticmap?center=Brooklyn+Bridge,New+York,NY&zoom=13&size=600x300&maptype=roadmap
+&markers=color:blue%7Clabel:S%7C40.702147,-74.015794&markers=color:green%7Clabel:G%7C40.711614,-74.012318
+&markers=color:red%7Clabel:C%7C40.718217,-73.998284
+&key=YOUR_API_KEY
+
+
+
+
+
+function initMap() {
+    // The location of Uluru
+    const uluru = { lat: -32.868, lng: -71.114 }
+    // The map, centered at Uluru
+    const map = new google.maps.Map(document.getElementById("map"), {
+      zoom: 8,
+      center: uluru,
+    });
+    // The marker, positioned at Uluru
+    const marker = new google.maps.Marker({
+      position: uluru,
+      map: map,
+    });
+  }
+
+
+  <script src="https://polyfill.io/v3/polyfill.min.js?features=default"></script>
+      <script
+        src="https://maps.googleapis.com/maps/api/js?key=AIzaSyAePkvDPoDqFXhE1IlvsegE0YeuorfJmU8Y&callback=initMap&libraries=&v=weekly"
+        defer
+      ></script>
+
+
+      class="modal-content" style="width: 100%; height: 100%"
+
+
+
+
+      <div class="mapouter"><div class="gmap_canvas"><iframe width="350" height="300" id="gmap_canvas" 
+      src="https://maps.google.com/maps?q=&t=&z=11&ie=UTF8&iwloc=&output=embed" frameborder="0" scrolling="no" marginheight="0" marginwidth="0"></iframe><a href="https://embedgooglemap.net/145/">relevant</a></div><style>.mapouter{position:relative;text-align:right;height:300px;width:350px;}.gmap_canvas
+       {overflow:hidden;background:none!important;height:300px;width:350px;}</style></div>
+
+
+
+
+
+
+           <div class="mapouter">
+        <div class="gmap_canvas">
+            <iframe  height="370" width="280" id="gmap_canvas" 
+                src="https://maps.google.com/maps?q=university%20of%20san%20francisco&t=&z=11&ie=UTF8&iwloc=&output=embed" 
+                frameborder="0" scrolling="no" marginheight="0" marginwidth="0">
+            </iframe>
+        </div>
+        <style>.mapouter{position:relative;text-align:right;height:370;width:280px;}.gmap_canvas 
+        {overflow:hidden;background:none!important;height:370px;width:280px;}</style>
+    </div>
+    `
+
+
+    src="https://maps.google.com/maps?&t=&z=11&ie=UTF8&iwloc=&output=embed" 
+
+
+     <td class="text-center" style="color:yellow;">${data[index].Magnitud}</td>
+
+
+
+
+     function getmapDetails(element){
+    let magnitud = element.getAttribute("data-mag");
+    let rg = element.getAttribute("data-rg");
+    let lat = element.getAttribute("data-lat");
+    let long = element.getAttribute("data-long");
+    let fyh=element.getAttribute("data-fecha");
+    let profund=element.getAttribute("data-profu");
+  
+    document.getElementById("ModalmaplLabel").innerHTML=(rg);
+    document.getElementById("ModalmaplLabel2").innerHTML=(magnitud);
+    document.getElementById("fecyhor").innerHTML=(fyh);
+    document.getElementById("profundi").innerHTML=(profund)+` KM`;
+
+    let mapgoo = document.getElementById("mapa")
+    mapgoo.innerHTML = `
+    <div class="mapouter">
+        <div class="gmap_canvas">
+            <iframe  height="360" width="280" id="gmap_canvas" 
+                src="https://maps.google.com/maps?z=7&t=m&q=loc:${lat}+${long}&output=embed" 
+                frameborder="0" scrolling="no" marginheight="0" marginwidth="0">
+            </iframe>
+        </div>
+        <style>.mapouter{position:relative;text-align:right;height:360;width:280px;}.gmap_canvas 
+        {overflow:hidden;background:none!important;height:360px;width:280px;}</style>
+    </div>
+    `;
+}

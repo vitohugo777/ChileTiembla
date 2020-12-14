@@ -20,7 +20,8 @@ function GetSismos() {
                         <tr>
                             <td>${data[index].Fecha} </a></td>
                             <td>${data[index].RefGeografica}</td>
-                            <td class="text-center"><button type="button" class="btn btn-primary btn-sm" data-toggle="modal" 
+                            <td class="text-center">
+                            <button type="button" class="btn btn-primary btn-sm" data-toggle="modal" 
                             data-target="#modalmap" data-fecha="${data[index].Fecha}" data-rg="${data[index].RefGeografica}"
                             data-mag="${mg}" data-profu="${data[index].Profundidad}" 
                             data-lat="${data[index].Latitud}" data-long="${data[index].Longitud}"
@@ -122,7 +123,7 @@ function GetSismos() {
     `;
   }
   
- function getmapDetails(element){
+  function getmapDetails(element){
     let magnitud = element.getAttribute("data-mag");
     let rg = element.getAttribute("data-rg");
     let lat = element.getAttribute("data-lat");
@@ -135,6 +136,7 @@ function GetSismos() {
     document.getElementById("fecyhor").innerHTML=(fyh);
     document.getElementById("profundi").innerHTML=(profund)+` KM`;
 
+    
     let mapgoo = document.getElementById("mapa")
     mapgoo.innerHTML = `
     <div class="mapouter">
@@ -149,3 +151,4 @@ function GetSismos() {
     </div>
     `;
 }
+
