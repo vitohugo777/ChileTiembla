@@ -13,75 +13,44 @@ function GetSismos() {
             var tabla = document.getElementById("sismos");
             for (let index = 0; index < data.length; index++){
             
-                var mg = parseFloat(data[index].Magnitud);
-                
+                var mg = (parseFloat(data[index].Magnitud)).toFixed(1);
+                let cadenaMagnitud="";
                 if (mg < 4) {
-                    tabla.innerHTML += `
+                    cadenaMagnitud=`<td align="center" style="vertical-align:middle;"><p>${mg}</p></td>`
+                    } 
+                    else {
+                    if (mg >= 4 && mg < 6) {
+                        cadenaMagnitud= `<td align="center" style="vertical-align:middle; color:yellow"><p>${mg}</p></td>`
+                    } 
+                        else {
+                            cadenaMagnitud= `<td align="center" style="vertical-align:middle; color:red"><p>${mg}</p></td>`
+                        }
+                    } 
+
+
+                tabla.innerHTML += `
                         <tr>
-                            <td>${data[index].Fecha} </a></td>
+                            <td> ${data[index].Fecha} </a></td>
                             <td>${data[index].RefGeografica}</td>
-                            <td class="text-center">
-                            <button type="button" class="btn btn-primary btn-sm" data-toggle="modal" 
+                            <td align="center">
+
+                            <a class="btn btn-primary btn-sm m-1 p-1" data-toggle="modal" 
                             data-target="#modalmap" data-fecha="${data[index].Fecha}" data-rg="${data[index].RefGeografica}"
                             data-mag="${mg}" data-profu="${data[index].Profundidad}" 
                             data-lat="${data[index].Latitud}" data-long="${data[index].Longitud}"
-                            onclick="getmapDetails(this)">Mapa</button>
-
-                           
-                          </td>
-
-                            <td class="text-center">${mg}</td>
-                            <td class="text-center priority-4">${data[index].Profundidad}</td>
-                            <td class="text-center priority-5">${data[index].Latitud}</td>
-                            <td class="text-center priority-5">${data[index].Longitud}</td>
+                            href='javascript:;' 
+                            onclick="getmapDetails(this);" 
+                            role="button">
+                            mapa
+                          </a> </td>
+                            ${cadenaMagnitud}
+                            <td align="center" class="text-center priority-4" >${data[index].Profundidad}</td>
+                            <td align="center" class="text-center priority-5" >${data[index].Latitud}</td>
+                            <td align="center" class="text-center priority-5" >${data[index].Longitud}</td>
                         </tr>
                         `
-                }
-                else {
-                    if (mg >= 4 && mg <= 7) {
-                        tabla.innerHTML += `
-                        <tr>
-                            <td>${data[index].Fecha} </a></td>
-                            <td>${data[index].RefGeografica}</td>
-                            <td class="text-center"><button type="button" class="btn btn-primary btn-sm" data-toggle="modal" 
-                            data-target="#modalmap" data-fecha="${data[index].Fecha}" data-rg="${data[index].RefGeografica}"
-                            data-mag="${mg}" data-profu="${data[index].Profundidad}" 
-                            data-lat="${data[index].Latitud}" data-long="${data[index].Longitud}"
-                            onclick="getmapDetails(this)">Mapa</button>
-
-                           
-                          </td>
-
-                            <td class="text-center" style="color:yellow;">${data[index].Magnitud}</td>
-                            <td class="text-center priority-4">${data[index].Profundidad}</td>
-                            <td class="text-center priority-5">${data[index].Latitud}</td>
-                            <td class="text-center priority-5">${data[index].Longitud}</td>
-                        </tr>
-                                `
                     }
-                    else {
-                        tabla.innerHTML += `
-                        <tr>
-                            <td>${data[index].Fecha} </a></td>
-                            <td>${data[index].RefGeografica}</td>
-                            <td class="text-center"><button type="button" class="btn btn-primary btn-sm" data-toggle="modal" 
-                            data-target="#modalmap" data-fecha="${data[index].Fecha}" data-rg="${data[index].RefGeografica}"
-                            data-mag="${mg}" data-profu="${data[index].Profundidad}" 
-                            data-lat="${data[index].Latitud}" data-long="${data[index].Longitud}"
-                            onclick="getmapDetails(this)">Mapa</button>
-
-                           
-                          </td>
-
-                          <td class="text-center" style="color:red;">${data[index].Magnitud}</td>
-                          <td class="text-center priority-4">${data[index].Profundidad}</td>
-                          <td class="text-center priority-5">${data[index].Latitud}</td>
-                          <td class="text-center priority-5">${data[index].Longitud}</td>
-                      </tr>
-                                `
-                        }
-                    }
-                }
+                
         }).fail(function(error){
                             alert("Entró en el Fail de la llamada AJAX")
                             console.log(error);

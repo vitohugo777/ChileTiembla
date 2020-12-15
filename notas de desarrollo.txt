@@ -127,3 +127,11 @@ function initMap() {
     </div>
     `;
 }
+
+
+<button type="button" class="btn btn-primary btn-sm" data-toggle="modal" 
+                                data-target="#modalmap" data-fecha="${data[index].Fecha}" data-rg="${data[index].RefGeografica}"
+                                data-mag="${mg}" data-profu="${data[index].Profundidad}" 
+                                data-lat="${data[index].Latitud}" data-long="${data[index].Longitud}"
+                                onclick="getmapDetails(this)">Mapa</button>
+                            </td>
