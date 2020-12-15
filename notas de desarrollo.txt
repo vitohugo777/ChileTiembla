@@ -135,3 +135,15 @@ function initMap() {
                                 data-lat="${data[index].Latitud}" data-long="${data[index].Longitud}"
                                 onclick="getmapDetails(this)">Mapa</button>
                             </td>
+-------
+
+ 
+    <div class="container">
+        <div class="row">
+            <div class=" col1 col-12 col-sm-12 col-md-12">
+                <img src="assests/img/chileTiembla.gif" class="rounded mx-auto d-block" alt="Chile Tiembla">
+            </div>  
+        </div>
+    </div>
+    `;
+  }

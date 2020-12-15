@@ -83,11 +83,11 @@ function GetSismos() {
     </nav>      
     
     <div class="container">
-        <div class="row">
+        
             <div class=" col1 col-12 col-sm-12 col-md-12">
                 <img src="assests/img/chileTiembla.gif" class="rounded mx-auto d-block" alt="Chile Tiembla">
             </div>  
-        </div>
+        
     </div>
     `;
   }
