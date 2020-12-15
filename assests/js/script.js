@@ -32,7 +32,7 @@ function GetSismos() {
                         <tr>
                             <td style="vertical-align:middle;"> ${data[index].Fecha} </a></td>
                             <td style="vertical-align:middle;">${data[index].RefGeografica}</td>
-                            <td align="center">
+                            <td style="vertical-align:middle;" align="center">
 
                             <a class="btn btn-primary btn-sm m-1 p-1" data-toggle="modal" 
                             data-target="#modalmap" data-fecha="${data[index].Fecha}" data-rg="${data[index].RefGeografica}"
@@ -83,11 +83,10 @@ function GetSismos() {
     </nav>      
     
     <div class="container">
-        
-            <div class=" col1 col-12 col-sm-12 col-md-12">
-                <img src="assests/img/chileTiembla.gif" class="rounded mx-auto d-block" alt="Chile Tiembla">
-            </div>  
-        
+      
+    <img src="assests/img/chiletiembla.gif" class="rounded mx-auto 
+    d-block" style="max-width: 100%;height: auto;" alt="Chile Tiembla">
+       
     </div>
     `;
   }

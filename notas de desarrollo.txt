@@ -147,3 +147,7 @@ function initMap() {
     </div>
     `;
   }
+
+  -------
+             <img src="assests/img/chiletiembla.gif" class="rounded mx-auto d-block" alt="Chile Tiembla" 
+       
