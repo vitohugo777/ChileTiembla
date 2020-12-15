@@ -82,10 +82,9 @@ function GetSismos() {
         </div>
     </nav>      
     
-    <div class="container">
+    <div class="grid_1">
       
-    <img src="assests/img/chiletiembla.gif" class="rounded mx-auto 
-    d-block" style="max-width: 100%;height: auto;" alt="Chile Tiembla">
+    <img src="assests/img/chiletiembla.gif" class="rounded mx-auto d-block" alt="Chile Tiembla">
        
     </div>
     `;
