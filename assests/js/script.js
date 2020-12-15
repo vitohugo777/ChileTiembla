@@ -16,22 +16,22 @@ function GetSismos() {
                 var mg = (parseFloat(data[index].Magnitud)).toFixed(1);
                 let cadenaMagnitud="";
                 if (mg < 4) {
-                    cadenaMagnitud=`<td align="center" style="vertical-align:middle;"><p>${mg}</p></td>`
+                    cadenaMagnitud=`<td style="vertical-align:middle;" align="center"><font size=5>${mg}</font></td>`
                     } 
                     else {
                     if (mg >= 4 && mg < 6) {
-                        cadenaMagnitud= `<td align="center" style="vertical-align:middle; color:yellow"><p>${mg}</p></td>`
+                        cadenaMagnitud= `<td style="vertical-align:middle; color:yellow;" align="center" class="fs-1"><font size=5>${mg}</font></td>`
                     } 
                         else {
-                            cadenaMagnitud= `<td align="center" style="vertical-align:middle; color:red"><p>${mg}</p></td>`
+                            cadenaMagnitud= `<td style="vertical-align:middle; color:red;" align="center" class="fs-1"><font size=5>${mg}</font></td>`
                         }
                     } 
 
 
                 tabla.innerHTML += `
                         <tr>
-                            <td> ${data[index].Fecha} </a></td>
-                            <td>${data[index].RefGeografica}</td>
+                            <td style="vertical-align:middle;"> ${data[index].Fecha} </a></td>
+                            <td style="vertical-align:middle;">${data[index].RefGeografica}</td>
                             <td align="center">
 
                             <a class="btn btn-primary btn-sm m-1 p-1" data-toggle="modal" 
@@ -40,13 +40,13 @@ function GetSismos() {
                             data-lat="${data[index].Latitud}" data-long="${data[index].Longitud}"
                             href='javascript:;' 
                             onclick="getmapDetails(this);" 
-                            role="button">
+                            role="button" style="vertical-align:middle;">
                             mapa
                           </a> </td>
                             ${cadenaMagnitud}
-                            <td align="center" class="text-center priority-4" >${data[index].Profundidad}</td>
-                            <td align="center" class="text-center priority-5" >${data[index].Latitud}</td>
-                            <td align="center" class="text-center priority-5" >${data[index].Longitud}</td>
+                            <td style="vertical-align:middle;" align="center" class="text-center priority-4" >${data[index].Profundidad}</td>
+                            <td style="vertical-align:middle;" align="center" class="text-center priority-5" >${data[index].Latitud}</td>
+                            <td style="vertical-align:middle;" align="center" class="text-center priority-5" >${data[index].Longitud}</td>
                         </tr>
                         `
                     }
