@@ -44,5 +44,7 @@ footer{
     .priority-4{
             display:none;
     }
-   
+   h1{
+       font-size: -2;
+   }
 }
