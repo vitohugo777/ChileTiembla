@@ -18,8 +18,9 @@ footer{
     
 #grid_1{
     display: grid;
-   
-    width: 100%;
+    margin: 0;
+    padding: 0;
+    width: 80%;
     height: auto;
    
 }
@@ -45,5 +46,21 @@ footer{
     .priority-4{
             display:none;
     }
+    .priority-3{
+        display:none;
+    }
+
 }
 
+table.dataTable thead .sorting:after,
+table.dataTable thead .sorting:before,
+table.dataTable thead .sorting_asc:after,
+table.dataTable thead .sorting_asc:before,
+table.dataTable thead .sorting_asc_disabled:after,
+table.dataTable thead .sorting_asc_disabled:before,
+table.dataTable thead .sorting_desc:after,
+table.dataTable thead .sorting_desc:before,
+table.dataTable thead .sorting_desc_disabled:after,
+table.dataTable thead .sorting_desc_disabled:before {
+bottom: .5em;
+}

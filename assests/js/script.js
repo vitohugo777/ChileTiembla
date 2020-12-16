@@ -30,8 +30,8 @@ function GetSismos() {
 
                 tabla.innerHTML += `
                         <tr>
-                            <td style="vertical-align:middle;"> ${data[index].Fecha} </a></td>
-                            <td style="vertical-align:middle;">${data[index].RefGeografica}</td>
+                            <td style="vertical-align:middle;">${data[index].Fecha} </a></td>
+                            <td style="vertical-align:middle; padding: 20px; width:70%;">${data[index].RefGeografica}</td>
                             <td style="vertical-align:middle;" align="center">
 
                             <a class="btn btn-primary btn-sm m-1 p-1" data-toggle="modal" 
@@ -81,12 +81,10 @@ function GetSismos() {
             </ul>
         </div>
     </nav>      
-    
-    <div class="grid_1">
-      
-    <img src="assests/img/chiletiembla.gif" class="rounded mx-auto d-block" alt="Chile Tiembla">
-       
+    <div>
+     <img src="assests/img/chiletiembla.gif" class="img-fluid" alt="Chile Tiembla">
     </div>
+    
     `;
   }
   
