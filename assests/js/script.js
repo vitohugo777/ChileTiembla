@@ -100,21 +100,19 @@ function GetSismos() {
     document.getElementById("ModalmaplLabel").innerHTML=(rg);
     document.getElementById("ModalmaplLabel2").innerHTML=(magnitud);
     document.getElementById("fecyhor").innerHTML=(fyh);
-    document.getElementById("profundi").innerHTML=(profund)+` KM`;
-
-    
+    document.getElementById("profundi").innerHTML=(profund)+` KM`
     let mapgoo = document.getElementById("mapa")
     mapgoo.innerHTML = `
     <div class="mapouter">
         <div class="gmap_canvas">
-            <iframe  height="360" width="280" id="gmap_canvas" 
+            <iframe  height="360" width="200" id="gmap_canvas" 
                 src="https://maps.google.com/maps?z=7&t=m&q=loc:${lat}+${long}&output=embed" 
                 frameborder="0" scrolling="no" marginheight="0" marginwidth="0">
             </iframe>
         </div>
-        <style>.mapouter{position:relative;text-align:right;height:360;width:280px;}.gmap_canvas 
-        {overflow:hidden;background:none!important;height:360px;width:280px;}</style>
+        <style>.mapouter{position:relative;text-align:right;height:360;width:200px;}.gmap_canvas 
+        {overflow:hidden;background:none!important;height:360px;width:200px;}</style>
     </div>
     `;
-}
-
+    
+  }
