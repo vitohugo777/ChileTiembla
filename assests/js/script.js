@@ -32,15 +32,15 @@ function GetSismos() {
                         <tr>
                             <td style="vertical-align:middle;">${data[index].Fecha} </a></td>
                             
-                            <td style="vertical-align:middle;" align="center">
+                            <td style="vertical-align:middle; margin-right" align="center">
 
-                            <a class="btn btn-primary btn-sm m-1 p-1" data-toggle="modal" 
+                            <a class="btn btn-primary btn-sm m-1 pt-1 pb-1" data-toggle="modal" 
                             data-target="#modalmap" data-fecha="${data[index].Fecha}" data-rg="${data[index].RefGeografica}"
                             data-mag="${mg}" data-profu="${data[index].Profundidad}" 
                             data-lat="${data[index].Latitud}" data-long="${data[index].Longitud}"
                             href='javascript:;' 
                             onclick="getmapDetails(this);" 
-                            role="button" style="vertical-align:middle;">
+                            role="button" style="vertical-align:middle; align:left;">
                             mapa
                           </a> </td>
                           <td style="vertical-align:middle;">${data[index].RefGeografica}</td>
