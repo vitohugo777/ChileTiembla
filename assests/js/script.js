@@ -31,7 +31,7 @@ function GetSismos() {
                 tabla.innerHTML += `
                         <tr>
                             <td style="vertical-align:middle;">${data[index].Fecha} </a></td>
-                            <td style="vertical-align:middle; padding: 20px; width:70%;">${data[index].RefGeografica}</td>
+                            
                             <td style="vertical-align:middle;" align="center">
 
                             <a class="btn btn-primary btn-sm m-1 p-1" data-toggle="modal" 
@@ -43,6 +43,7 @@ function GetSismos() {
                             role="button" style="vertical-align:middle;">
                             mapa
                           </a> </td>
+                          <td style="vertical-align:middle;">${data[index].RefGeografica}</td>
                             ${cadenaMagnitud}
                             <td style="vertical-align:middle;" align="center" class="text-center priority-4" >${data[index].Profundidad}</td>
                             <td style="vertical-align:middle;" align="center" class="text-center priority-5" >${data[index].Latitud}</td>
