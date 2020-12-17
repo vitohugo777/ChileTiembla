@@ -30,19 +30,19 @@ function GetSismos() {
 
                 tabla.innerHTML += `
                         <tr>
-                            <td style="vertical-align:middle;">${data[index].Fecha} </a></td>
-                            
-                            <td style="vertical-align:middle; margin-right" align="center">
-
-                            <a class="btn btn-primary btn-sm m-1 pt-1 pb-1" data-toggle="modal" 
+                            <td style="vertical-align:middle;">
+                            <a href="modal" data-toggle="modal" 
                             data-target="#modalmap" data-fecha="${data[index].Fecha}" data-rg="${data[index].RefGeografica}"
                             data-mag="${mg}" data-profu="${data[index].Profundidad}" 
                             data-lat="${data[index].Latitud}" data-long="${data[index].Longitud}"
                             href='javascript:;' 
                             onclick="getmapDetails(this);" 
                             role="button" style="vertical-align:middle; align:left;">
-                            mapa
+                            ${data[index].Fecha}
                           </a> </td>
+                           
+                            
+                           
                           <td style="vertical-align:middle;">${data[index].RefGeografica}</td>
                             ${cadenaMagnitud}
                             <td style="vertical-align:middle;" align="center" class="text-center priority-4" >${data[index].Profundidad}</td>
@@ -103,16 +103,19 @@ function GetSismos() {
     document.getElementById("profundi").innerHTML=(profund)+` KM`
     let mapgoo = document.getElementById("mapa")
     mapgoo.innerHTML = `
+    
     <div class="mapouter">
-        <div class="gmap_canvas">
-            <iframe  height="360" width="200" id="gmap_canvas" 
-                src="https://maps.google.com/maps?z=7&t=m&q=loc:${lat}+${long}&output=embed" 
-                frameborder="0" scrolling="no" marginheight="0" marginwidth="0">
-            </iframe>
-        </div>
-        <style>.mapouter{position:relative;text-align:right;height:360;width:200px;}.gmap_canvas 
-        {overflow:hidden;background:none!important;height:360px;width:200px;}</style>
+    <div class="gmap_canvas">
+        <iframe  height="360" width="200" id="gmap_canvas" 
+            src="https://maps.google.com/maps?z=7&t=m&q=loc:${lat}+${long}&output=embed" 
+            frameborder="0" scrolling="no" marginheight="0" marginwidth="0">
+        </iframe>
     </div>
+    <style>.mapouter{position:relative;text-align:right;height:360;width:200px;}.gmap_canvas 
+    {overflow:hidden;background:none!important;height:360px;width:200px;}</style>
+</div>
+        
     `;
     
   }
+

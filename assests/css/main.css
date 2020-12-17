@@ -47,4 +47,16 @@ footer{
    h1{
        font-size: -2;
    }
+   .priority-5{
+    display:none;
+    }
+    .priority-1{
+        width: 30%;
+    }
+.priority-2{
+    width: 45%;
+    }
+.priority-3{
+    width: 25%;
+    }
 }
