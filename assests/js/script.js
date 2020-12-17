@@ -28,6 +28,7 @@ function GetSismos() {
                     } 
 
 
+
                 tabla.innerHTML += `
                         <tr>
                             <td style="vertical-align:middle;">
@@ -38,12 +39,14 @@ function GetSismos() {
                             href='javascript:;' 
                             onclick="getmapDetails(this);" 
                             role="button" style="vertical-align:middle; align:left;">
+                            <font size=4>
                             ${data[index].Fecha}
+                            </font>
                           </a> </td>
                            
                             
                            
-                          <td style="vertical-align:middle;">${data[index].RefGeografica}</td>
+                          <td style="vertical-align:middle;"><font size=4>${data[index].RefGeografica}</td>
                             ${cadenaMagnitud}
                             <td style="vertical-align:middle;" align="center" class="text-center priority-4" >${data[index].Profundidad}</td>
                             <td style="vertical-align:middle;" align="center" class="text-center priority-5" >${data[index].Latitud}</td>
@@ -68,9 +71,11 @@ function GetSismos() {
   function addHeader() {
     let header = document.getElementById("cabeceraYNavbar")
     header.innerHTML = `
-    <nav class="navbar navbar-expand-lg navbar-dark bg-dark ">
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark" style="margin-left: -20px; margin-right: -20px;">
         <a class="navbar-brand active" href="index.html">Ultimos Sismos</a>
-            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+            <button class="navbar-toggler" type="button" data-toggle="collapse" 
+            data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" 
+            aria-label="Toggle navigation">
              <span class="navbar-toggler-icon"></span>
             </button>
         <div class="collapse navbar-collapse" id="navbarNav">
