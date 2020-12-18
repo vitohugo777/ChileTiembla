@@ -109,12 +109,10 @@ function GetSismos() {
     
     let mapgoo = document.getElementById("mapa")
     mapgoo.innerHTML = `
-    <div class="overlay" onclick="style.pointerEvents='none'" style="pointer-events: none;"></div>
-
-    <p><iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d9246.031384335518!2d-5.862734799999997!3d54.5950456!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0xea73ef4e907baa09!2sJonny+Jordan+Freelance+Web+Design!5e0!3m2!1sen!2suk!4v1476298973059" width="100%" height="350" frameborder="0" style="border:0" allowfullscreen="">
-    </iframe></p>
+    <iframe class="iframe" src="https://maps.google.com/?ll=${lat}+${long}&z=6&t=m&q=loc:&output=embed" height="400" width="200"
+    frameborder="0" style="border:0" allowfullscreen></iframe>
     `;
     
   }
  
-
+  
