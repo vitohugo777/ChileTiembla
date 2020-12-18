@@ -25,6 +25,189 @@
 <body>
   <h1>En Desarrollo</h1>
   
+  <div id="map_container" class="clearfix" style="margin-top: 20px">
+    <div class="col-md-8 col-sm-8">
+        <div id="map_canvas_container" style=" overflow-x: scroll; ">
+            <div id="map" class="map_part" style="height:600px;">
+                <iframe id="map-canvas" class="map_part" width="100%" height="600" frameborder="0" scrolling="no" marginheight="0" marginwidth="0" src="https://maps.google.com/maps?width=100%25&amp;height=600&amp;hl=es&amp;q=Les%20Rambles,%201%20Barcelona,%20Spain+(Mi%20nombre%20de%20egocios)&amp;t=&amp;z=14&amp;ie=UTF8&amp;iwloc=B&amp;output=embed" style="width: 100%;"></iframe>
+            </div>
+        </div>
+    </div>
+    <div class="map_part col-md-4 col-sm-4">
+    
+    <div class="distance-row clearfix">
+    <div id="code" class="col-md-12">
+                    <h4>Ingresa Tus Ajustes </h4>
+                </div>
+    <form action="#" id="map_generator" method="post">
+                <div class="col-md-12">
+                    <div class="distance-container clearfix">
+                        <div class="col-md-4"><b>Título</b></div>
+                        <div class="col-md-8 col-sm-7 col-xs-7">
+                            <input type="text" class="input" id="title" name="title" value="Mi nombre de egocios">
+                        </div>
+                        
+                    </div>
+                </div>
+                <div class="col-md-12">
+                    <div class="distance-container clearfix">
+                        <div class="col-md-4"><b>Dirección</b></div>
+                        <div class="col-md-8 col-sm-7 col-xs-7">
+                            <input type="text" class="input" id="address" name="address" value="Les Rambles, 1 Barcelona, Spain">
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-12">
+                    <div class="distance-container clearfix">
+                        <div class="col-md-4"><b>Coordenadas</b><br>(opcional)</div>
+                        <div class="col-md-8 col-sm-7 col-xs-7">
+                            <input type="text" class="input" id="coordinates" name="coordinates" value="" placeholder="e.g: 53.2734,-7.77832031">
+                            <div><a href="/coordenadas-de-googlemaps.html" target="_blank">Haga clic aquí para obtener coordenadas</a></div>
+                        </div>
+
+                    </div>
+                </div>
+                <div class="col-md-12">
+                    <div class="distance-container clearfix">
+                        <div class="col-md-4"><b>Vistas</b></div>
+                        <div class="col-md-8 col-sm-7 col-xs-7">
+                            <select size="1" id="t" name="t">
+                                <option value="roadmap" selected=""> Map </option>
+                                <option value="satellite"> Satellite </option>
+                                <option value="hybrid"> Hybrid </option>
+                                <option value="terrain"> Terrain </option>
+                            </select>
+                        </div>
+                        
+                    </div>
+                </div>
+                <div class="col-md-12">
+                    <div class="distance-container clearfix">
+                        <div class="col-md-4"><b>Acercamiento</b></div>
+                        <div class="col-md-8 col-sm-7 col-xs-7">
+                            <select size="1" id="zoom" name="zoom">
+                                <option value="0" id="zoom_custom">max.zoom out</option>
+                                <option value="1">
+                                    4.000 km
+                                </option>
+                                <option value="2">
+                                    2.000 km (world)
+                                </option>
+                                <option value="3">
+                                    1.000 km
+                                </option>
+                                <option value="4">
+                                    400 km (continent)
+                                </option>
+                                <option value="5">
+                                    200 km
+                                </option>
+                                <option value="6">
+                                    100 km (country)
+                                </option>
+                                <option value="7">
+                                    50 km
+                                </option>
+                                <option value="8">
+                                    30 km
+                                </option>
+                                <option value="9">
+                                    15 km (area)
+                                </option>
+                                <option value="10">
+                                    8 km
+                                </option>
+                                <option value="11">
+                                    4 km
+                                </option>
+                                <option value="12">
+                                    2 km (city)
+                                </option>
+                                <option value="13">
+                                    1 km
+                                </option>
+                                <option value="14" selected="selected">
+                                    400 m (district)
+                                </option>
+                                <option value="15">
+                                    200 m
+                                </option>
+                                <option value="16">
+                                    100 m
+                                </option>
+                                <option value="17">
+                                    50 m (street)
+                                </option>
+                                <option value="18">
+                                    20 m
+                                </option>
+                                <option value="19">
+                                    10 m
+                                </option>
+                                <option value="20">
+                                    5 m  (house)
+                                </option>
+                                <option value="21">
+                                    2,5 m
+                                </option>
+                            </select>
+
+                        </div>
+                        
+                    </div>
+                </div>
+                <div class="col-md-12">
+                    <div class="distance-container clearfix">
+                        <div class="col-md-4"><b>Altura</b></div>
+                        <div class="col-md-8 col-sm-7 col-xs-7">
+                            <input type="text" class="input" id="h" name="h" value="600">
+                        </div>
+                        
+                    </div>
+                </div>
+                <div class="col-md-12">
+                    <div class="distance-container clearfix">
+                        <div class="col-md-4"><b>Amplitud</b></div>
+                        <div class="col-md-8 col-sm-7 col-xs-7">
+                            <input type="text" class="input" id="w" name="w" value="720" disabled="disabled">
+                        </div>
+                        
+                    </div>
+                </div>
+          <div class="col-md-12">
+            <div class="distance-container clearfix">
+              <div class="col-md-12" style="float:left;"><b style="float:left;margin-right: 12px;">Ajustar el ancho automáticamente</b>
+                <input type="checkbox" class="uncheck" id="autofit" name="autofit" checked="checked">
+              </div>
+
+              <small style="margin-left: 14px; ">El mapa incrustado se expandirá para ajustarse al ancho de su elemento contenedor.</small>
+
+
+            </div>
+          </div>
+                <div class="col-md-12" style="display: none">
+                    <div class="distance-container clearfix">
+                        <div class="col-md-12" style="float:left;"><b style="float:left;margin-right: 12px;">Mostrar información en una ventana por default</b> 
+                        <input type="checkbox" class="checkbox" id="info" name="info" value="A">
+                           </div>
+                       
+                         <small style="margin-left: 14px; ">(De otra forma luego de hacer clic)</small>
+                             
+                         
+                    </div>
+                </div>
+                <div class="col-md-12" style="display:none;">
+                 <p class="button draw_btn" id="save-root-btn" style="width:100%;" onclick="alert('The code below was now updated and can be copied and inserted.')">Show preview &amp; generate code</p>
+                    
+                </div>
+                </form>
+                <div id="code" class="col-md-12">
+                    <h4>Copiar tu código de iFrame</h4>
+                    <textarea rows="3" class="distance-container" cols="50" readonly="readonly" onclick="jQuery(this).select();"></textarea>
+                </div>
+            </div>
+    </div>
+</div>
 
   <script src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
   <script src="assests/js/script.js"></script>

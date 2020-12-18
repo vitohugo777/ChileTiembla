@@ -106,6 +106,7 @@ function GetSismos() {
     document.getElementById("ModalmaplLabel2").innerHTML=(magnitud);
     document.getElementById("fecyhor").innerHTML=(fyh);
     document.getElementById("profundi").innerHTML=(profund)+` KM`
+    
     let mapgoo = document.getElementById("mapa")
     mapgoo.innerHTML = `
     
@@ -116,11 +117,11 @@ function GetSismos() {
             frameborder="0" scrolling="no" marginheight="0" marginwidth="0">
         </iframe>
     </div>
-    <style>.mapouter{position:relative;text-align:right;height:360;width:200px;}.gmap_canvas 
-    {overflow:hidden;background:none!important;height:360px;width:200px;}</style>
+    <style>.mapouter{position:relative;text-align:right;height:360;width:200;}.gmap_canvas 
+    {overflow:hidden;background:none!important;height:360;width:200;}</style>
 </div>
-        
     `;
     
   }
+ 
 
