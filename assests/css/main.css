@@ -69,3 +69,8 @@ footer{
     top:480px; /* your iframe height */
     margin-top:-480px; /* your iframe height */
 }
+
+#googleMap{
+    width:100%;
+    height:100%;
+  }

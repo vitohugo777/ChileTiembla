@@ -1,66 +1,66 @@
-if (document.getElementById("cabeceraYNavbar")){
-    addHeader()
-}
-
-
-function GetSismos() {
-    $.ajax({
-        type:"GET",
-        url: `https://api.gael.cl/general/public/sismos`
-        
-        }).done(function(data){
-            
-            var tabla = document.getElementById("sismos");
-            for (let index = 0; index < data.length; index++){
-            
-                var mg = (parseFloat(data[index].Magnitud)).toFixed(1);
-                let cadenaMagnitud="";
-                if (mg < 4) {
-                    cadenaMagnitud=`<td style="vertical-align:middle;" align="center"><font size=5>${mg}</font></td>`
-                    } 
-                    else {
-                    if (mg >= 4 && mg < 6) {
-                        cadenaMagnitud= `<td style="vertical-align:middle; color:yellow;" align="center" class="fs-1"><font size=5>${mg}</font></td>`
-                    } 
-                        else {
-                            cadenaMagnitud= `<td style="vertical-align:middle; color:red;" align="center" class="fs-1"><font size=5>${mg}</font></td>`
-                        }
-                    } 
-
-
-
-                tabla.innerHTML += `
-                        <tr>
-                            <td style="vertical-align:middle;">
-                            <a href="modal" data-toggle="modal" 
-                            data-target="#modalmap" data-fecha="${data[index].Fecha}" data-rg="${data[index].RefGeografica}"
-                            data-mag="${mg}" data-profu="${data[index].Profundidad}" 
-                            data-lat="${data[index].Latitud}" data-long="${data[index].Longitud}"
-                            href='javascript:;' 
-                            onclick="getmapDetails(this);" 
-                            role="button" style="vertical-align:middle; align:left;">
-                            <font size=4>
-                            ${data[index].Fecha}
-                            </font>
-                          </a> </td>
-                           
-                            
-                           
-                          <td style="vertical-align:middle;"><font size=4>${data[index].RefGeografica}</td>
-                            ${cadenaMagnitud}
-                            <td style="vertical-align:middle;" align="center" class="text-center priority-4" >${data[index].Profundidad}</td>
-                            <td style="vertical-align:middle;" align="center" class="text-center priority-5" >${data[index].Latitud}</td>
-                            <td style="vertical-align:middle;" align="center" class="text-center priority-5" >${data[index].Longitud}</td>
-                        </tr>
-                        `
-                    }
-                
-        }).fail(function(error){
-                            alert("Entró en el Fail de la llamada AJAX")
-                            console.log(error);
-        })
-                        
+    if (document.getElementById("cabeceraYNavbar")){
+        addHeader()
     }
+
+
+    function GetSismos() {
+        $.ajax({
+            type:"GET",
+            url: `https://api.gael.cl/general/public/sismos`
+            
+            }).done(function(data){
+                
+                var tabla = document.getElementById("sismos");
+                for (let index = 0; index < data.length; index++){
+                
+                    var mg = (parseFloat(data[index].Magnitud)).toFixed(1);
+                    let cadenaMagnitud="";
+                    if (mg < 4) {
+                        cadenaMagnitud=`<td style="vertical-align:middle;" align="center"><font size=5>${mg}</font></td>`
+                        } 
+                        else {
+                        if (mg >= 4 && mg < 6) {
+                            cadenaMagnitud= `<td style="vertical-align:middle; color:yellow;" align="center" class="fs-1"><font size=5>${mg}</font></td>`
+                        } 
+                            else {
+                                cadenaMagnitud= `<td style="vertical-align:middle; color:red;" align="center" class="fs-1"><font size=5>${mg}</font></td>`
+                            }
+                        } 
+
+
+
+                    tabla.innerHTML += `
+                            <tr>
+                                <td style="vertical-align:middle;">
+                                <a href="modal" data-toggle="modal" 
+                                data-target="#modalmap" data-fecha="${data[index].Fecha}" data-rg="${data[index].RefGeografica}"
+                                data-mag="${mg}" data-profu="${data[index].Profundidad}" 
+                                data-lat="${data[index].Latitud}" data-long="${data[index].Longitud}"
+                                href='javascript:;' 
+                                onclick="getmapDetails(this);initialize(this);" 
+                                role="button" style="vertical-align:middle; align:left;">
+                                <font size=4>
+                                ${data[index].Fecha}
+                                </font>
+                            </a> </td>
+                            
+                                
+                            
+                            <td style="vertical-align:middle;"><font size=4>${data[index].RefGeografica}</td>
+                                ${cadenaMagnitud}
+                                <td style="vertical-align:middle;" align="center" class="text-center priority-4" >${data[index].Profundidad}</td>
+                                <td style="vertical-align:middle;" align="center" class="text-center priority-5" >${data[index].Latitud}</td>
+                                <td style="vertical-align:middle;" align="center" class="text-center priority-5" >${data[index].Longitud}</td>
+                            </tr>
+                            `
+                        }
+                    
+            }).fail(function(error){
+                                alert("Entró en el Fail de la llamada AJAX")
+                                console.log(error);
+            })
+                            
+        }
 
     if (document.getElementById("sismos")){
         GetSismos()
@@ -90,15 +90,17 @@ function GetSismos() {
     <div class="text-center">
      <img src="assests/img/chiletiembla.gif" class="rounded" alt="Chile Tiembla">
     </div>
-    
     `;
-  }
+    }
+
+  
+
+  
   
   function getmapDetails(element){
     let magnitud = element.getAttribute("data-mag");
     let rg = element.getAttribute("data-rg");
-    let lat = element.getAttribute("data-lat");
-    let long = element.getAttribute("data-long");
+
     let fyh=element.getAttribute("data-fecha");
     let profund=element.getAttribute("data-profu");
   
@@ -107,12 +109,27 @@ function GetSismos() {
     document.getElementById("fecyhor").innerHTML=(fyh);
     document.getElementById("profundi").innerHTML=(profund)+` KM`
     
-    let mapgoo = document.getElementById("mapa")
-    mapgoo.innerHTML = `
-    <iframe class="iframe" src="https://maps.google.com/?ll=${lat}+${long}&z=6&t=m&q=loc:&output=embed" height="400" width="200"
-    frameborder="0" style="border:0" allowfullscreen></iframe>
-    `;
-    
+
   }
  
+  
+  function initialize(element) {
+    let lat = element.getAttribute("data-lat");
+    let long = element.getAttribute("data-long");
+    // Configuración del mapa
+    var mapProp = {
+      center: new google.maps.LatLng(lat, long),
+      zoom: 7,
+      mapTypeId: google.maps.MapTypeId.ROADMAP
+    };
+    // Agregando el mapa al tag de id googleMap
+    var map = new google.maps.Map(document.getElementById("googleMap"), mapProp);
+   
+    // Creando un marker en el mapa
+    var marker = new google.maps.Marker({
+      position: new google.maps.LatLng(lat, long),
+      map: map,
+      title: 'Epicentro'
+    });
+  }
   
