@@ -61,14 +61,7 @@ footer{
     }
 }
 
-.overlay {
-    background:transparent;
-    position:relative;
-    width:300px; /* your iframe width */
-    height:480px; /* your iframe height */
-    top:480px; /* your iframe height */
-    margin-top:-480px; /* your iframe height */
-}
+
 
 #googleMap{
     width:100%;

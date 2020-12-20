@@ -5,7 +5,9 @@
     <!-- jQuery 3.3.1 -->
     <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" 
     integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
-     <!-- Popper JS 1.14.3 -->
+    
+    
+    <!-- Popper JS 1.14.3 -->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js"
     integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49" crossorigin="anonymous"></script>
     <!-- Bootstrap 4.1.3 CSS -->
@@ -14,24 +16,49 @@
     <!-- Bootstrap JS 4.1.3 -->
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js" 
     integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy" crossorigin="anonymous"></script>
-   <!-- styles -->
+   
+    <script src="https://polyfill.io/v3/polyfill.min.js?features=default"></script>
+   
+    
+    <!-- styles -->
    <link rel="stylesheet" href="assests/css/main.css">
     
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
+ 
+    
     <title>Chile Tiembla</title>
 </head>
 <body>
-  <!-- Modal -->
-  <div class="modal" id="modalmap" tabindex="-1" aria-labelledby="modalmap" aria-hidden="true">
+  
+  <div class="container-fluid">
+  <header id="cabeceraYNavbar"></header>
+</div>
+ 
+
+ </div> 
+    
+      <h4 class="text-white m-2 p-2 text-center ">Ultimos sismos con magnitud mayor o igual a 3.0</h4>
+        <table id="sismos" class="table  text-white container-fluid" style="table-layout: fixed;">
+          <tr>
+            <th class="text-center priority-1 p-0 m-8"  style="vertical-align:middle;">Fecha y Hora</th>
+            <th class="priority-2 p-0 text-center"  style="vertical-align:middle;">Ref. Geografica</th>
+            <th class="text-center priority-3 p-0"  style="vertical-align:middle;">Magnitud (Ml)</th>
+            <th class="text-center priority-4">Profundidad (KM)</th>
+            <th class="text-center priority-5">Latitud</h>
+            <th class="text-center priority-5">Longitud</th>
+          </tr>
+        </table>
+      
+    <!-- Modal -->
+  <div class="modal" id="modalmap" tabindex="-1" data-backdrop="static" data-keyboard="false" aria-labelledby="modalmap" aria-hidden="true">
     <div class="modal-dialog modal-sm">
       <div class="modal-content">
         <div class="modal-body">
           <div class="container-fluid">
             <div class="row p-2">
               <div class="col 1 col-8 m-0 p-0">
-                <h5>Epicentro</h5>
+                 <h5>Epicentro</h5>
               </div>
               <div class="col 2 col-4 text-right p-0">
                 <h5>Magnitud</h5>
@@ -63,7 +90,8 @@
                     <br>
                     <br>
                     <br>
-                    <button type="button" class=" btn-primary " data-dismiss="modal">Volver</button>
+                    <button id="botonmodal" type="button" class=" btn-primary " data-dismiss="modal" onclick="alcerrarmodal()">Volver</button>
+                   
                 </div>
               </div>
             </div>
@@ -71,33 +99,11 @@
         </div>
       </div>
     </div>
-  </div>
-  <div class="container-fluid">
-  <header id="cabeceraYNavbar"></header>
-</div>
+   </div>
  
-
- </div> 
-    
-      <h4 class="text-white m-2 p-2 text-center ">Ultimos sismos con magnitud mayor o igual a 3.0</h4>
-        <table id="sismos" class="table  text-white container-fluid" style="table-layout: fixed;">
-          <tr>
-            <th class="text-center priority-1 p-0 m-8"  style="vertical-align:middle;">Fecha y Hora</th>
-            <th class="priority-2 p-0 text-center"  style="vertical-align:middle;">Ref. Geografica</th>
-            <th class="text-center priority-3 p-0"  style="vertical-align:middle;">Magnitud (Ml)</th>
-            <th class="text-center priority-4">Profundidad (KM)</th>
-            <th class="text-center priority-5">Latitud</h>
-            <th class="text-center priority-5">Longitud</th>
-          </tr>
-        </table>
-      
-    
-  
-  
-  
   <script src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
 
-  <script type="text/javascript" src="http://maps.googleapis.com/maps/api/js?key=AIzaSyAePkvDPoDqFXhE1IlvsegE0YeuorfJmU8&key=AIzaSyAcSFeu7r742WprhC8XfXV-7U14K1Dzcdg"></script>
+  <script type="text/javascript" src="http://maps.googleapis.com/maps/api/js?key=AIzaSyAePkvDPoDqFXhE1IlvsegE0YeuorfJmU8&key=AIzaSyAcSFeu7r742WprhC8XfXV-7U14K1Dzcdg" defer></script>
 
  
 

@@ -221,3 +221,44 @@ src="https://maps.google.com/maps?width=100%25&amp;height=300&amp;z=7&t=m&q=loc:
 
 src="https://www.google.com/maps/embed/v1/place?q=Status201%20Web%20Development&amp;key=AIzaSyCCGx7iveK21dme8OuLgX9Je7TUDDCw3_A">
           <script type="text/javascript" src="http://maps.googleapis.com/maps/api/js?key=AIzaSyAcSFeu7r742WprhC8XfXV-7U14K1Dzcdg"></script>
+
+
+
+          -----------------
+
+          onclick="javascript:window.location.reload()"
+
+
+
+          ---------------------
+
+          
+2
+3
+4
+5
+6
+7
+8
+9
+$(document).ready(function(){
+   	$("#prueba1").mousedown(function(e){
+   		//1: izquierda, 2: medio/ruleta, 3: derecho
+        	if(e.which == 3) 
+        		{
+           		 $('#mensaje1').text("has hecho click derecho");
+        		}
+    	});
+});
+
+  const cityCircle = new google.maps.Circle({
+        strokeColor: "#FF0000",
+        strokeOpacity: 0.8,
+        strokeWeight: 2,
+        fillColor: "#FF0000",
+        fillOpacity: 0.35,
+        map,
+        center: mapProp.center,
+        radius: Math.sqrt(603502) * 100,
+      });
+    

@@ -1,3 +1,7 @@
+
+
+
+    
     if (document.getElementById("cabeceraYNavbar")){
         addHeader()
     }
@@ -37,7 +41,7 @@
                                 data-mag="${mg}" data-profu="${data[index].Profundidad}" 
                                 data-lat="${data[index].Latitud}" data-long="${data[index].Longitud}"
                                 href='javascript:;' 
-                                onclick="getmapDetails(this);initialize(this);" 
+                                onclick="getmapDetails(this);" 
                                 role="button" style="vertical-align:middle; align:left;">
                                 <font size=4>
                                 ${data[index].Fecha}
@@ -100,36 +104,75 @@
   function getmapDetails(element){
     let magnitud = element.getAttribute("data-mag");
     let rg = element.getAttribute("data-rg");
-
+    let lati = element.getAttribute("data-lat");
+    let longi = element.getAttribute("data-long");
     let fyh=element.getAttribute("data-fecha");
     let profund=element.getAttribute("data-profu");
   
     document.getElementById("ModalmaplLabel").innerHTML=(rg);
     document.getElementById("ModalmaplLabel2").innerHTML=(magnitud);
     document.getElementById("fecyhor").innerHTML=(fyh);
-    document.getElementById("profundi").innerHTML=(profund)+` KM`
+    document.getElementById("profundi").innerHTML=(profund)+` KM`;
     
+    initialize(lati,longi,magnitud);
+    var myModal = document.getElementById('modal')
+var myInput = document.getElementById('googleMap')
 
+
+
+   
   }
  
   
-  function initialize(element) {
-    let lat = element.getAttribute("data-lat");
-    let long = element.getAttribute("data-long");
+  function initialize(lat,long,magnitud) { 
     // Configuración del mapa
     var mapProp = {
       center: new google.maps.LatLng(lat, long),
-      zoom: 7,
-      mapTypeId: google.maps.MapTypeId.ROADMAP
+      zoom: 6,
+      mapTypeControl: false,
     };
     // Agregando el mapa al tag de id googleMap
-    var map = new google.maps.Map(document.getElementById("googleMap"), mapProp);
-   
+    
+    const map = new google.maps.Map(document.getElementById("googleMap"), mapProp);
+       
     // Creando un marker en el mapa
     var marker = new google.maps.Marker({
-      position: new google.maps.LatLng(lat, long),
-      map: map,
-      title: 'Epicentro'
-    });
+        position: new google.maps.LatLng(lat, long),
+        map: map,
+        title: 'Epicentro'
+      });
+
+      // Creando un circulo en el mapa
+      var cityCircle = new google.maps.Circle({
+        strokeColor: "#FF0000",
+        strokeOpacity: 0.5,
+        strokeWeight: 2,
+        fillColor: "#FF0000",
+        fillOpacity: 0.15,
+        map,
+        center: mapProp.center,
+        radius: Math.sqrt(magnitud) * 50000,
+      });
+    
+      
+    map.addListener("center_changed", () => {
+        // 3 seconds after the center of the map has changed, pan back to the
+        // marker.
+        window.setTimeout(() => {
+          map.panTo(marker.getPosition());
+        }, 3000);   
+  });
+  map.addListener("center_changed", () => {
+    // 3 seconds after the center of the map has changed, pan back to the
+    // marker.
+    window.setTimeout(() => {
+      map.panTo(marker.getPosition());
+    }, 3000);   
+});
   }
-  
+
+ 
+
+function alcerrarmodal() {
+location.reload();
+}
