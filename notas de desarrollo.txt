@@ -262,3 +262,7 @@ $(document).ready(function(){
         radius: Math.sqrt(603502) * 100,
       });
     
+
+    -------------
+
+    <meta http-equiv="Content-Security-Policy" content="upgrade-insecure-requests"/>
