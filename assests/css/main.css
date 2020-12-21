@@ -30,6 +30,11 @@ footer{
     margin-left: 20px;
     margin-top:10px ;
 }
+
+.priority-6{
+    width: 5%;
+    margin:20px;
+    }
  
 @media screen and (max-width: 1225px) and (min-width: 835px) {
     .priority-5{
@@ -51,19 +56,27 @@ footer{
     display:none;
     }
     .priority-1{
-        width: 30%;
+        width: 28%;
     }
 .priority-2{
-    width: 45%;
+    width: 43%;
     }
 .priority-3{
-    width: 25%;
+    width: 22%;
+    }
+
+.priority-6{
+    width: 7%;
     }
 }
-
 
 
 #googleMap{
     width:100%;
     height:100%;
-  }
+    }
+
+
+#especial{
+text-decoration: underline ;
+    }

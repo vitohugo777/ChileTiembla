@@ -20,14 +20,17 @@
                     var mg = (parseFloat(data[index].Magnitud)).toFixed(1);
                     let cadenaMagnitud="";
                     if (mg < 4) {
-                        cadenaMagnitud=`<td style="vertical-align:middle;" align="center"><font size=5>${mg}</font></td>`
-                        } 
+                        cadenaMagnitud=`<td style="vertical-align:middle;" align="center"><font size=5>${mg}</font>
+                        </td>`
+                      } 
                         else {
                         if (mg >= 4 && mg < 6) {
-                            cadenaMagnitud= `<td style="vertical-align:middle; color:yellow;" align="center" class="fs-1"><font size=5>${mg}</font></td>`
+                            cadenaMagnitud= `<td style="vertical-align:middle; color:yellow;" align="center" class="fs-1"><font size=5>${mg}</font>
+                           </td>`
                         } 
                             else {
-                                cadenaMagnitud= `<td style="vertical-align:middle; color:red;" align="center" class="fs-1"><font size=5>${mg}</font></td>`
+                                cadenaMagnitud= `<td style="vertical-align:middle; color:red;" align="center" class="fs-1"><font size=5>${mg}</font>
+                                </td>`
                             }
                         } 
 
@@ -43,13 +46,11 @@
                                 href='javascript:;' 
                                 onclick="getmapDetails(this);" 
                                 role="button" style="vertical-align:middle; align:left;" >
-                                <font size=4 class="text-decoration-underline">
+                                <font size=4  id="especial">
                                 ${data[index].Fecha}
-                                </font>
-                            </a> </td>
-                            
-                                
-                            
+                                </font></a> </td>
+                           
+
                             <td style="vertical-align:middle;"><font size=4>${data[index].RefGeografica}</td>
                                 ${cadenaMagnitud}
                                 <td style="vertical-align:middle;" align="center" class="text-center priority-4" >${data[index].Profundidad}</td>
