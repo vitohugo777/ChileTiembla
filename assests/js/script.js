@@ -35,15 +35,15 @@
 
                     tabla.innerHTML += `
                             <tr>
-                                <td style="vertical-align:middle;">
+                                <td style="vertical-align:middle;" class="text-decoration-underline">
                                 <a href="modal" data-toggle="modal" 
                                 data-target="#modalmap" data-fecha="${data[index].Fecha}" data-rg="${data[index].RefGeografica}"
                                 data-mag="${mg}" data-profu="${data[index].Profundidad}" 
                                 data-lat="${data[index].Latitud}" data-long="${data[index].Longitud}"
                                 href='javascript:;' 
                                 onclick="getmapDetails(this);" 
-                                role="button" style="vertical-align:middle; align:left;">
-                                <font size=4>
+                                role="button" style="vertical-align:middle; align:left;" >
+                                <font size=4 class="text-decoration-underline">
                                 ${data[index].Fecha}
                                 </font>
                             </a> </td>
