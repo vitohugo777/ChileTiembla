@@ -47,7 +47,7 @@
                                 onclick="getmapDetails(this);" 
                                 role="button" style="vertical-align:middle; align:left;" >
                                 <font size=4  id="especial">
-                                ${data[index].Fecha.substr(8,2)}-${data[index].Fecha.substr(5,2)}-${data[index].Fecha.substr(0,4)}   ${data[index].Fecha.substr(-8)}
+                                ${data[index].Fecha.substr(8,2)}-${data[index].Fecha.substr(5,2)}-${data[index].Fecha.substr(0,4)} ${data[index].Fecha.substr(-8)}
                                 </font></a> </td>
                                 
 
