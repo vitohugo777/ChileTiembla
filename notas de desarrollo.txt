@@ -282,3 +282,7 @@ $(document).ready(function(){
                                 ${data[index].Fecha}
                                 </font>
                             </a> </td>
+
+                            -----------------
+
+                            radius: Math.sqrt(magnitud) * 50000,

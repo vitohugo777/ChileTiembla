@@ -127,9 +127,19 @@ var myInput = document.getElementById('googleMap')
   
   function initialize(lat,long,magnitud) { 
     // Configuración del mapa
+    
+    let zoo=6;
+    if (magnitud>6 && magnitud <= 7) {
+      zoo=5
+
+    }
+    if (magnitud>7 && magnitud <= 8) {
+      zoo=4
+
+    }
     var mapProp = {
       center: new google.maps.LatLng(lat, long),
-      zoom: 6,
+      zoom: zoo,
       mapTypeControl: false,
     };
     // Agregando el mapa al tag de id googleMap
@@ -152,7 +162,8 @@ var myInput = document.getElementById('googleMap')
         fillOpacity: 0.15,
         map,
         center: mapProp.center,
-        radius: Math.sqrt(magnitud) * 50000,
+        radius: Math.pow(1.5,((magnitud*1.5)+1))*5000
+
       });
     
       
